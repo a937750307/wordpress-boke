@@ -1,31 +1,42 @@
+// 整个站点的全局配置
 export const siteConfig = {
+  // 站点名称（浏览器标题栏 / SEO）
   name: "Someone's Portfolio",
+  // 站点一句话简介（meta description）
   description: "A showcase of my work and thoughts",
+
+  // 顶部主导航文案
   nav: {
-    home: "Home",
-    posts: "Posts",
-    projects: "Projects",
-    about: "About"
+    home: "首页",      // “首页”
+    posts: "文章",    // “文章”
+    projects: "项目", // “项目”
+    about: "关于我"     // “关于我”
   },
+
+  // 首页 hero 区域
   home: {
-    greeting: "Hello, I'm Kai.",
-    description: "A passionate frontend developer with a keen eye for design and a love for creating beautiful, functional web experiences.",
+    greeting: "Hello, I'm IanChow.", // 问候语
+    description: "A passionate frontend developer with a keen eye for design and a love for creating beautiful, functional web experiences.", // 自我介绍
     buttons: {
-      viewProjects: "View Projects",
-      readPosts: "Read Posts"
+      viewProjects: "查看项目", // “查看项目”按钮
+      readPosts: "阅读文章"        // “阅读文章”按钮
     }
   },
+
+  // 项目（Projects）页面
   projects: {
-    title: "My Projects",
-    description: "Here are some of the current projects I've been working on. I really enjoy creating new projects and coming up with new ideas. I'm always working on something new, so check back often!",
-    backButton: "Back to Home",
-    noProjects: "No projects found.",
+    title: "忆痕的日记本",   // 页面主标题
+    description: "Here are some of the current projects I've been working on. I really enjoy creating new projects and coming up with new ideas. I'm always working on something new, so check back often!", // 页面副标题
+    backButton: "Back to Home", // 返回首页按钮
+    noProjects: "No projects found.", // 项目为空时的占位文字
+
+    // 项目列表
     items: [
       {
-        title: "TempMail.Best",
-        description: "Best Temporary Email.",
-        href: "https://tempmail.best",
-        imageUrl: "/assets/images/projects/tempmail.best.png"
+        title: "TempMail.Best",                      // 项目名称
+        description: "Best Temporary Email.",        // 一句话描述
+        href: "https://tempmail.best",               // 项目链接
+        imageUrl: "/assets/images/projects/tempmail.best.png" // 封面图
       },
       {
         title: "DNS.Surf",
@@ -59,24 +70,30 @@ export const siteConfig = {
       }
     ]
   },
+
+  // 文章（Posts）页面
   posts: {
-    title: "My Writing",
-    description: "My thoughts and ideas about technology and development.",
-    backButton: "Back to Home",
-    noPosts: "No posts found matching your search.",
-    searchPlaceholder: "Filter posts by title...",
+    title: "My Writing",              // 页面主标题
+    description: "My thoughts and ideas about technology and development.", // 页面副标题
+    backButton: "Back to Home",       // 返回首页按钮
+    noPosts: "No posts found matching your search.", // 文章为空时的占位文字
+    searchPlaceholder: "Filter posts by title...",   // 搜索框占位符
+
+    // 分页文案
     pagination: {
-      previous: "Previous",
-      next: "Next"
+      previous: "Previous", // “上一页”
+      next: "Next"          // “下一页”
     },
+
+    // 文章列表
     items: [
       {
-        title: "Run MCP Server in a Docker sandbox",
-        description: "Run MCP Server in a Docker sandbox to avoid supply chain attacks.",
-        date: "Apr 25, 2025",
-        href: "/post/guide-to-running-mcp-server-in-a-sandbox",
-        imageUrl: "/assets/images/posts/post1.jpg",
-        readingTime: 8
+        title: "Run MCP Server in a Docker sandbox",  // 文章标题
+        description: "Run MCP Server in a Docker sandbox to avoid supply chain attacks.", // 摘要
+        date: "Apr 25, 2025",                         // 发布日期
+        href: "/post/guide-to-running-mcp-server-in-a-sandbox", // 站内链接
+        imageUrl: "/assets/images/posts/post1.jpg",   // 封面图
+        readingTime: 8                                // 预计阅读分钟数
       },
       {
         title: "Use Cloudflare Workers to concat audio files",
@@ -152,13 +169,17 @@ export const siteConfig = {
       }
     ]
   },
+
+  // 关于（About）页面
   about: {
-    title: "About",
-    description: "Learn more about me and my journey.",
-    backButton: "Back to Home"
+    title: "About",                // 页面标题
+    description: "Learn more about me and my journey.", // 页面简介
+    backButton: "Back to Home"     // 返回首页按钮
   },
+
+  // 主题切换文案
   theme: {
-    dayMode: "Day mode",
-    nightMode: "Night mode"
+    dayMode: "Day mode",   // 日间模式
+    nightMode: "Night mode" // 夜间模式
   }
-} as const 
+} as const; // 使用 `as const` 让 TypeScript 推断出最严格的字面量类型
